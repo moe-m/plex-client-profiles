@@ -27,21 +27,21 @@
   <CodecProfiles>
     <VideoCodec name="hevc">
      <Limitations>
-       <UpperBound name="video.width" value="3840" isRequired="true" />
+       <UpperBound name="video.width" value="4096" isRequired="true" />
        <UpperBound name="video.height" value="2160" isRequired="true" />
        <UpperBound name="video.bitDepth" value="10" />
      </Limitations>
    </VideoCodec>
    <VideoCodec name="h265">
       <Limitations>
-        <UpperBound name="video.width" value="3840" isRequired="true" />
+        <UpperBound name="video.width" value="4096" isRequired="true" />
         <UpperBound name="video.height" value="2160" isRequired="true" />
         <UpperBound name="video.bitDepth" value="10" />
       </Limitations>
    </VideoCodec>
   <VideoCodec name="*">
      <Limitations>
-       <UpperBound name="video.width" value="3840" />
+       <UpperBound name="video.width" value="4096" />
        <UpperBound name="video.height" value="2160" />
      </Limitations>
     </VideoCodec>
