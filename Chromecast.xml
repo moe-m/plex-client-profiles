@@ -21,14 +21,14 @@
       <Limitations>
         <UpperBound name="video.width" value="3840"/>
         <UpperBound name="video.height" value="2176"/>
-		<UpperBound name="video.bitrate" value="75000"/>
+		<UpperBound name="video.bitrate" value="85000"/>
       </Limitations>
     </VideoCodec>
     <VideoCodec name="h264,mpeg4">
       <Limitations>
         <UpperBound name="video.width" value="3840"/>
         <UpperBound name="video.height" value="2176"/>
-        <UpperBound name="video.bitrate" value="75000"/>
+        <UpperBound name="video.bitrate" value="85000"/>
 		<UpperBound name="video.bitDepth" value="10" />
         <UpperBound name="video.level" value="42" />
       </Limitations>
