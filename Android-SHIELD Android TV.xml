@@ -36,19 +36,20 @@
   <CodecProfiles>
     <VideoCodec name="*">
       <Limitations>
-        <UpperBound name="video.width" value="1920" isRequired="true" />
-        <UpperBound name="video.height" value="1080" isRequired="true" />
+        <UpperBound name="video.width" value="4096" isRequired="false" />
+        <UpperBound name="video.height" value="2160" isRequired="false" />
+        <UpperBound name="video.frameRate" value="60" isRequired="false" />
         <NotMatch name="video.anamorphic" value="1" />
       </Limitations>
     </VideoCodec>
     <VideoCodec name="h264">
       <Limitations>
-        <Match name="video.profile" list="baseline|main|high" />
+        <Match name="video.profile" list="baseline|main|high" isRequired="false" />
       </Limitations>
     </VideoCodec>
     <VideoAudioCodec name="aac">
       <Limitations>
-        <UpperBound name="audio.channels" value="6" />
+        <UpperBound name="audio.channels" value="6" isRequired="false"  />
       </Limitations>
     </VideoAudioCodec>
   </CodecProfiles>
