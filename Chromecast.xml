@@ -17,16 +17,22 @@
     <PhotoProfile container="jpeg,png,gif"/>
   </DirectPlayProfiles>
 <CodecProfiles>
+<VideoCodec name="*">
+	  <Limitations>
+	    <UpperBound name="video.width" value="4096" isRequired="yes" />
+	    <UpperBound name="video.height" value="2160" isRequired="yes" />
+	  </Limitations>
+	</VideoCodec>
     <VideoCodec name="h265,Hevc,vp9">
       <Limitations>
-        <UpperBound name="video.width" value="3840"/>
+        <UpperBound name="video.width" value="4096"/>
         <UpperBound name="video.height" value="2176"/>
-		<UpperBound name="video.bitrate" value="85000"/>
+	<UpperBound name="video.bitrate" value="85000"/>
       </Limitations>
     </VideoCodec>
     <VideoCodec name="h264,mpeg4">
       <Limitations>
-        <UpperBound name="video.width" value="3840"/>
+        <UpperBound name="video.width" value="4096"/>
         <UpperBound name="video.height" value="2176"/>
         <UpperBound name="video.bitrate" value="85000"/>
 		<UpperBound name="video.bitDepth" value="10" />
