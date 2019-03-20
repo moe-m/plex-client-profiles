@@ -22,9 +22,11 @@
   <CodecProfiles>
     <VideoCodec name="*">
       <Limitations>
-        <UpperBound name="video.width" value="1920" isRequired="true" />
-        <UpperBound name="video.height" value="1080" isRequired="true" />
-        <UpperBound name="video.bitDepth" value="8" />
+        <UpperBound name="video.width" value="4096" isRequired="true" />
+        <UpperBound name="video.height" value="4096" isRequired="true" />
+        <UpperBound name="video.bitDepth" value="10" />
+        <UpperBound name="video.level" value="41" />
+        
       </Limitations>
     </VideoCodec>
   </CodecProfiles>
