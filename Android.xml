@@ -8,8 +8,13 @@
     <PhotoProfile container="jpeg" />
   </TranscodeTargets>
   <DirectPlayProfiles>
-    <VideoProfile container="mp4" codec="h264,mpeg4,hevc" audioCodec="aac,mp3,pcm" />
-    <VideoProfile container="mkv" codec="h264,mpeg4,hevc" audioCodec="aac,mp3,pcm" />
+    <VideoProfile container="mkv" codec="h264,mpeg4" audioCodec="aac,he-aac,mp3,pcm,flac"  />
+    <VideoProfile container="mp4" codec="hevc,h265" audioCodec="aac,he-aac,mp3,pcm,flac" subtitleCodec="mov_text,tx3g,ttxt,text" />
+    <VideoProfile container="mkv" codec="hevc,h265" audioCodec="aac,he-aac,mp3,pcm,flac"  subtitleCodec="mov_text,tx3g,ttxt,text"/>
+    <VideoProfile container="mp4" codec="h264,mpeg4" audioCodec="aac,he-aac,mp3,pcm,flac"  />
+    <VideoProfile container="mkv" codec="h264,mpeg4" audioCodec="aac,he-aac,mp3,pcm,flac"  />
+    <VideoProfile protocol="hls" container="mpegts" codec="h264" audioCodec="aac,he-aac,mp3,pcm,flacc" subtitleCodec="mov_text,tx3g,ttxt,text" />
+    <VideoProfile protocol="hls" container="mpegts" codec="h265" audioCodec="aac,he-aac,mp3,pcm,flacc" subtitleCodec="mov_text,tx3g,ttxt,text" />
     <MusicProfile container="mp3" codec="mp3" />
     <MusicProfile container="flac" codec="flac" />
     <MusicProfile container="ogg" codec="vorbis" />
@@ -27,17 +32,19 @@
       <Limitations>
         <UpperBound name="video.width" value="4096" isRequired="true" />
         <UpperBound name="video.height" value="2160" isRequired="true" />
-        <NotMatch name="video.anamorphic" value="1" />
+        <UpperBound name="video.frameRate" value="60" isRequired="false" />
+       <UpperBound name="video.bitrate" value="85000"/>
+		<UpperBound name="video.bitDepth" value="10" />
       </Limitations>
     </VideoCodec>
     <VideoCodec name="h264">
       <Limitations>
-        <Match name="video.profile" list="baseline|main|high" />
+        <Match name="video.profile" list="baseline|main|high"  isRequired="false" />
       </Limitations>
     </VideoCodec>
     <VideoAudioCodec name="aac">
       <Limitations>
-        <UpperBound name="audio.channels" value="2" />
+        <UpperBound name="audio.channels" value="6" />
       </Limitations>
     </VideoAudioCodec>
   </CodecProfiles>
