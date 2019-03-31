@@ -8,8 +8,8 @@
     <PhotoProfile container="jpeg" />
   </TranscodeTargets>
   <DirectPlayProfiles>
-    <VideoProfile container="mp4" codec="h264,mpeg4" audioCodec="aac" />
-    <MusicProfile container="mp4" codec="aac" />
+    <VideoProfile container="mp4" codec="h264,mpeg4,hevc" audioCodec="aac,mp3,pcm" />
+    <VideoProfile container="mkv" codec="h264,mpeg4,hevc" audioCodec="aac,mp3,pcm" />
     <MusicProfile container="mp3" codec="mp3" />
     <MusicProfile container="flac" codec="flac" />
     <MusicProfile container="ogg" codec="vorbis" />
@@ -25,8 +25,8 @@
   <CodecProfiles>
     <VideoCodec name="*">
       <Limitations>
-        <UpperBound name="video.width" value="1920" isRequired="true" />
-        <UpperBound name="video.height" value="1080" isRequired="true" />
+        <UpperBound name="video.width" value="4096" isRequired="true" />
+        <UpperBound name="video.height" value="2160" isRequired="true" />
         <NotMatch name="video.anamorphic" value="1" />
       </Limitations>
     </VideoCodec>
